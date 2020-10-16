@@ -1,13 +1,10 @@
 applications:
-- name: articulate
-  path: target/articulate-1.0.jar
-  memory: 512M
-  random-route: true
-#  host: articulate-jl
-  instances: 1
-  buildpack: java_buildpack
-  stack: cflinuxfs2
+- name: articulate-v3
+  disk_quota: 1G
   env:
-    JAVA_OPTS: -Xss228k
-  services:
-  - attendee-service
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 1.8.0_222}}'
+  instances: 1
+  memory: 1G
+  routes:
+  - route: articulate-v3-appreciative-llama-gl.cfapps.io
+  stack: cflinuxfs3
