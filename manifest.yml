@@ -1,8 +1,11 @@
 applications:
 - name: articulate-v3
-  disk_quota: 1G
+  buildpacks:
+  - https://github.com/cloudfoundry/java-buildpack.git#v4.29.1
   env:
-    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 1.8.0_222}}'
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 1.8.0_242}}'
+  path: target/articulate-1.0.jar
+  disk_quota: 1G
   instances: 1
   memory: 1G
   routes:
