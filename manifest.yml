@@ -9,5 +9,5 @@ applications:
   instances: 1
   memory: 1G
   routes:
-  - route: articulate-v2.bucharest.cf-app.com
+  - route: articulate.apps.bucharest.cf-app.com
   stack: cflinuxfs3
