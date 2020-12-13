@@ -1,5 +1,5 @@
 applications:
-- name: articulate-v3
+- name: articulate-v2
   buildpacks:
   - https://github.com/cloudfoundry/java-buildpack.git#v4.29.1
   env:
@@ -9,5 +9,5 @@ applications:
   instances: 1
   memory: 1G
   routes:
-  - route: articulate-v3-appreciative-llama-gl.cfapps.io
+  - route: articulate-v2.bucharest.cf-app.com
   stack: cflinuxfs3
